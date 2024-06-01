@@ -16,7 +16,7 @@ Welcome to my first full-stack project based on Django! This project aims to pro
 
 ## Project Overview
 
-This project is a E-commerce. The main objective of this project is to learn and implement the full-stack development process using Django.
+This project is a Social media app ChatterBox. The main objective of this project is to learn and implement the full-stack development process using Django.
 
 ## Features
 
