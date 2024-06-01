@@ -16,7 +16,7 @@ Welcome to my first full-stack project based on Django! This project aims to pro
 
 ## Project Overview
 
-This project is a [brief description of what your project is about]. It allows users to [key functionalities of your project]. The main objective of this project is to learn and implement the full-stack development process using Django.
+This project is a E-commerce. The main objective of this project is to learn and implement the full-stack development process using Django.
 
 ## Features
 
@@ -24,4 +24,4 @@ This project is a [brief description of what your project is about]. It allows u
 - Create, read, update, and delete (CRUD) functionality
 - Responsive front-end using HTML, CSS, and JavaScript
 - Database integration with Django's ORM
-- [Add more features as you implement them]
+
