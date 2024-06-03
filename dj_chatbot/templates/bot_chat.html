@@ -114,14 +114,26 @@
                 </li>
             </ul>
         </div>
-        <form class="message-form">
+        
+        <form method='POST' class="message-form">
+            {% csrf_token %} 
             <div class="input-group">
-                <input type="text" class="form-control message-input" placeholder="Type your message...">
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-primary btn-send"><i class="fas fa-paper-plane"></i> Send</button>
-                </div>
+                <input type="text" class="form-control message-input" name="user_message" placeholder="Type your message...">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary btn-send"><i class="fas fa-paper-plane"></i> Send </button>
+                    </div>
             </div>
         </form>
+
+        {% if user_message %}
+        <div class="card-footer bg-light">
+            <div class="message-text">
+                <div class="message-sender">You</div>
+                <div class="message-content">{{ user_message }}</div>
+                <div class="message-time">Now</div>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
