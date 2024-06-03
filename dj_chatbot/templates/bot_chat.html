@@ -94,6 +94,31 @@
         background-color: #6a006a; /* Darker purple accent color on hover */
         border-color: #6a006a;
     }
+
+    .message.sent .message-text {
+        background-color: #343a40; /* Dark background color */
+        color: #ffffff; /* Light text color */
+        border-top-right-radius: 0;
+    }
+    
+    .message.sent .message-content {
+        color: black; /* Light text color */
+    }
+    
+    .message.received .message-text {
+        background-color: #f1f0f0;
+        color: #000000; /* Dark text color */
+        border-top-left-radius: 0;
+    }
+    
+    .message-sender {
+        color: #999999; /* Darker text color for sender */
+    }
+    
+    .message-time {
+        color: #999999; /* Darker text color for time */
+    }
+    
 </style>
 {% endblock %}
 
