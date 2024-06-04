@@ -112,12 +112,13 @@
     }
     
     .message-sender {
-        color: #999999; /* Darker text color for sender */
+        color: #000000; /* Darker text color for sender */
     }
     
     .message-time {
-        color: #999999; /* Darker text color for time */
+        color: #000000; /* Darker text color for time */
     }
+
     
 </style>
 {% endblock %}
@@ -132,10 +133,28 @@
             <ul class="messages-list">
                 <li class="message received">
                     <div class="message-text">
+                        
                         <div class="message-sender">AI Chatbot</div>
                         <div class="message-content">Hi, I am your AI Chatbot, you can ask me anything.</div>
                         <div class="message-time">10:00 AM</div>
+                        
+                        <div class="user-response" style="width: auto;">
+
+                            {% if user_message %}
+                            <div class="card-footer bg-light">
+                                <div class="message-text">
+                                    <div class="message-sender" style="color: #000000;">You</div>
+                                    <div class="message-content" style="color: #000000;">{{ user_message }}</div>
+                                    <div class="message-time" style="color: #000000;">Now</div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            
+                        </div>
+
                     </div>
+
+                    
                 </li>
             </ul>
         </div>
@@ -149,16 +168,9 @@
                     </div>
             </div>
         </form>
+        
 
-        {% if user_message %}
-        <div class="card-footer bg-light">
-            <div class="message-text">
-                <div class="message-sender">You</div>
-                <div class="message-content">{{ user_message }}</div>
-                <div class="message-time">Now</div>
-            </div>
-        </div>
-        {% endif %}
+
     </div>
 </div>
 {% endblock %}
