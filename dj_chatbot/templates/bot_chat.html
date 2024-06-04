@@ -119,6 +119,18 @@
         color: #000000; /* Darker text color for time */
     }
 
+    .user-message{
+        background-color: #ffffff;
+        color: #000000;
+        padding: 10px;
+        border-radius: 15px;
+        margin-top: 15px;
+        max-width: 70%;
+        align-self: flex-start;
+        border-top-left-radius: 0;
+
+    }
+
     
 </style>
 {% endblock %}
@@ -138,24 +150,19 @@
                         <div class="message-content">Hi, I am your AI Chatbot, you can ask me anything.</div>
                         <div class="message-time">10:00 AM</div>
                         
-                        <div class="user-response" style="width: auto;">
-
-                            {% if user_message %}
-                            <div class="card-footer bg-light">
-                                <div class="message-text">
-                                    <div class="message-sender" style="color: #000000;">You</div>
-                                    <div class="message-content" style="color: #000000;">{{ user_message }}</div>
-                                    <div class="message-time" style="color: #000000;">Now</div>
-                                </div>
-                            </div>
-                            {% endif %}
-                            
-                        </div>
-
                     </div>
-
-                    
                 </li>
+
+                {% if user_message %}
+                <li class="message user-message">
+                    <div class="message-text">
+                        <div class="message-sender" style="color: #000000;" >You</div>
+                        <div class="message-content" style="color: #000000;">{{ user_message }}</div>
+                        <div class="message-time" style="color: #000000;">Now</div>
+                    </div>
+                </li>
+                {% endif %}
+
             </ul>
         </div>
         
@@ -174,4 +181,5 @@
     </div>
 </div>
 {% endblock %}
+
 
