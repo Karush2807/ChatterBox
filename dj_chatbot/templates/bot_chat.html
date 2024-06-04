@@ -120,6 +120,18 @@
     }
 
     .user-message{
+        background-color: #0bcfcf;
+        color: #000000;
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        max-width: 70%;
+        align-self: flex-end;
+        border-top-left-radius: 0;
+
+    }
+
+    .aiResponse{
         background-color: #ffffff;
         color: #000000;
         padding: 10px;
@@ -159,6 +171,16 @@
                         <div class="message-sender" style="color: #000000;" >You</div>
                         <div class="message-content" style="color: #000000;">{{ user_message }}</div>
                         <div class="message-time" style="color: #000000;">Now</div>
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="aiResponse ai-message">
+                        <div class="message-sender" style="color: #000000; font-weight: bold;" >AI Chatbot</div>
+
+                        {{ ai_response }}
+
                     </div>
                 </li>
                 {% endif %}
